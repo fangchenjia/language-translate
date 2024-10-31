@@ -5,7 +5,7 @@ language-translate 是一款基于 Google 翻译在线转换 ts/js/json 多语�
 [中文](./README.md) ｜ [English](./README_EN.md)
 
 <p align="center">
-  <a href="https://github.com/hymhub/language-translate" target="_blank">
+  <a href="https://github.com/fangchenjia/language-translate" target="_blank">
     <img src="./md/logo.png" alt="language-translate" width="250"/>
   </a>
 </p>
@@ -16,12 +16,12 @@ language-translate 是一款基于 Google 翻译在线转换 ts/js/json 多语�
   <a href="https://www.npmjs.com/package/language-translate" target="__blank">
     <img alt="NPM Downloads" src="https://img.shields.io/npm/dt/language-translate">
   </a>
-  <a href="https://github.com/hymhub/language-translate/blob/main/LICENSE" target="__blank">
+  <a href="https://github.com/fangchenjia/language-translate/blob/main/LICENSE" target="__blank">
     <img src="https://img.shields.io/github/license/hymhub/language-translate.svg" alt="LICENSE">
   </a>
 </p>
 <p align="center">
-  <a href="https://github.com/hymhub/language-translate" target="__blank">
+  <a href="https://github.com/fangchenjia/language-translate" target="__blank">
     <img alt="GitHub stars" src="https://img.shields.io/github/stars/hymhub/language-translate?style=social">
   </a>
 <p>
@@ -39,7 +39,7 @@ language-translate 是一款基于 Google 翻译在线转换 ts/js/json 多语�
 ## 安装
 
 ```bash
-  npm i language-translate
+  npm i i18n-translate
 ```
 
 ## 使用
@@ -200,7 +200,7 @@ locales
 | └─color.zh.json
 ```
 
-也可以将翻译结果输出到另一个文件夹，只需要更改 `outPath` 即可，更多用法等你解锁哦，也可结合[FAQ](#faq)输出可选做出更多花样，项目 [example](https://github.com/hymhub/language-translate/tree/main/example) 目录中也提供了一些简单示例
+也可以将翻译结果输出到另一个文件夹，只需要更改 `outPath` 即可，更多用法等你解锁哦，也可结合[FAQ](#faq)输出可选做出更多花样，项目 [example](https://github.com/fangchenjia/language-translate/tree/main/example) 目录中也提供了一些简单示例
 
 ## 配置API
 
@@ -246,10 +246,10 @@ locales
 
 ### `IncrementalMode`
 
-|   值    |                                                                                        描述                                                                                        |
-| :-----: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| `cover` |                                                              覆盖模式: 目标文件中已有的 key 直接覆盖，没有的 key 新增                                                              |
-| `fast`  | 快速模式: 目标文件中已有 key 并且值不为空在翻译时会排除, 否则新增 key, 如果不理解可以去项目 [example](https://github.com/hymhub/language-translate/tree/main/example) 目录查看例子 |
+|   值    |                                                                                          描述                                                                                           |
+| :-----: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| `cover` |                                                                覆盖模式: 目标文件中已有的 key 直接覆盖，没有的 key 新增                                                                 |
+| `fast`  | 快速模式: 目标文件中已有 key 并且值不为空在翻译时会排除, 否则新增 key, 如果不理解可以去项目 [example](https://github.com/fangchenjia/language-translate/tree/main/example) 目录查看例子 |
 
 ### `ApiKeyConfig`
 
