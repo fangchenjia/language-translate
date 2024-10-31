@@ -104,7 +104,9 @@ const baiduLangConfig = new Map([
   ['zh-CN', 'zh'],
   ['en', 'en'],
   ['yue', 'yue'],
+  ['ms', 'may'],
   ['wyw', 'wyw'],
+  ['fa', 'per'],
   ['ja', 'jp'],
   ['ko', 'kor'],
   ['fr', 'fra'],
@@ -128,7 +130,9 @@ const baiduLangConfig = new Map([
   ['sv', 'swe'],
   ['hu', 'hu'],
   ['zh-TW', 'cht'],
-  ['vi', 'vie']
+  ['vi', 'vie'],
+  ['iw', 'heb'],
+  ['sr', 'srp']
 ])
 export const getBaiduLangCode: (lang: Lang) => Lang = (lang: Lang) => {
   return (baiduLangConfig.get(lang) ?? lang) as Lang
