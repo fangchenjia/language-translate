@@ -4,3 +4,6 @@
 # test
 node_modules
 example/*/package-lock.json
+dist
+test
+
