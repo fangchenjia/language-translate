@@ -1,3 +1,5 @@
+import type { Options as PrettierOptions } from 'prettier'
+
 export enum Lang {
   /** Chinese(Simplified)/中文(简体) */
   'zh-CN' = 'zh-CN',
@@ -303,5 +305,6 @@ export interface ExportConfig {
    */
   mergeEnabledChunkValuesLength?: number
   ignoreValuesAndCopyToTarget?: string[]
+  prettierOptions?: PrettierOptions
   translate: Translate[]
 }

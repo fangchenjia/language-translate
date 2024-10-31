@@ -11,6 +11,7 @@ import {
   unflattenObject
 } from './utils.js'
 import type { Proxy, ApiKeyConfig, SourceLanguageCode, TargetLanguageCode } from './types'
+import type { Options as PrettierOptions } from 'prettier'
 import { IncrementalMode, Lang } from './types.js'
 import { getTranslator } from './translators.js'
 import fs from 'fs'
@@ -29,7 +30,8 @@ export const translate = async ({
   translateRuntimeChunkSize = 5,
   translateRuntimeMergeEnabled = true,
   mergeEnabledChunkValuesLength = 5000,
-  ignoreValuesAndCopyToTarget = []
+  ignoreValuesAndCopyToTarget = [],
+  prettierOptions
 }: {
   input: string
   output: string
@@ -44,6 +46,7 @@ export const translate = async ({
   translateRuntimeMergeEnabled?: boolean
   mergeEnabledChunkValuesLength?: number
   ignoreValuesAndCopyToTarget?: string[]
+  prettierOptions?: PrettierOptions
 }): Promise<undefined> => {
   if (!isFilePath(input)) {
     return
@@ -205,14 +208,14 @@ export const translate = async ({
     })
     if (outFile != null) {
       outPutBuffer += JSON.stringify(mergeJson(outTextJson, resJson)).slice(1)
-      outPutBuffer = await prettier.format(outPutBuffer, { parser: output.endsWith('.json') ? 'json' : 'typescript' })
+      outPutBuffer = await prettier.format(outPutBuffer, { ...prettierOptions, parser: output.endsWith('.json') ? 'json' : 'typescript' })
       fs.writeFileSync(output, outPutBuffer)
       if (outTipMsg.length === 0) {
         outTipMsg = `${ls[toolsLang].patchSuccess} --> ${output}`
       }
     } else {
       outPutBuffer += JSON.stringify(resJson).slice(1)
-      outPutBuffer = await prettier.format(outPutBuffer, { parser: output.endsWith('.json') ? 'json' : 'typescript' })
+      outPutBuffer = await prettier.format(outPutBuffer, { ...prettierOptions, parser: output.endsWith('.json') ? 'json' : 'typescript' })
       const outDirname = path.dirname(output)
       fs.existsSync(outDirname) || fs.mkdirSync(outDirname, { recursive: true })
       fs.writeFileSync(output, outPutBuffer)

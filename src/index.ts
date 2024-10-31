@@ -114,7 +114,8 @@ program.description('Translate a single js/ts/json file')
                   translateRuntimeChunkSize: config.translateRuntimeChunkSize,
                   ignoreValuesAndCopyToTarget: config.ignoreValuesAndCopyToTarget,
                   translateRuntimeMergeEnabled: config.translateRuntimeMergeEnabled,
-                  mergeEnabledChunkValuesLength: config.mergeEnabledChunkValuesLength
+                  mergeEnabledChunkValuesLength: config.mergeEnabledChunkValuesLength,
+                  prettierOptions: config.prettierOptions
                 })
               })
             })
@@ -136,7 +137,8 @@ program.description('Translate a single js/ts/json file')
               translateRuntimeChunkSize: config.translateRuntimeChunkSize,
               ignoreValuesAndCopyToTarget: config.ignoreValuesAndCopyToTarget,
               translateRuntimeMergeEnabled: config.translateRuntimeMergeEnabled,
-              mergeEnabledChunkValuesLength: config.mergeEnabledChunkValuesLength
+              mergeEnabledChunkValuesLength: config.mergeEnabledChunkValuesLength,
+              prettierOptions: config.prettierOptions
             })
           })
         })
