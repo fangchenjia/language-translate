@@ -39,7 +39,7 @@ language-translate 是一款基于 Google 翻译在线转换 ts/js/json 多语�
 ## 安装
 
 ```bash
-  npm i i18n-cli-translate
+  npm i i18n-cli-translate -g
 ```
 
 ## 使用
