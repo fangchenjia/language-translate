@@ -1,7 +1,7 @@
 {
-  "name": "i18n-translate",
-  "version": "1.0.0",
-  "description": "只需提供ts/js/json翻译文件,自动翻译生成其他语言,支持增量更新",
+  "name": "i18n-cli-translate",
+  "version": "1.0.1",
+  "description": "根据ts/js/json翻译文件,自动翻译生成其他语言,支持增量更新",
   "scripts": {
     "build": "rimraf ./dist && tsc",
     "dev": "tsc --watch",
@@ -75,6 +75,7 @@
     "typescript": "^5.0.3"
   },
   "keywords": [
+    "i18n",
     "translation",
     "translate",
     "google-translate",

@@ -39,7 +39,7 @@ language-translate is a plug-in that converts ts/js/json multilingual files onli
 ## Install
 
 ```bash
-  npm i i18n-translate
+  npm i i18n-cli-translate
 ```
 
 ## Usage
